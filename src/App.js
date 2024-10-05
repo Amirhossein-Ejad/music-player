@@ -5,7 +5,7 @@ function App() {
     <div className="bg-primary">
       <div className="container flex justify-between  items-center ">
         <SideBar />
-        <div className="flex-[4_4_0] bg-white h-screen p-5">
+        <div className="flex-[4_4_0] w-full h-screen p-5">
           <Header />
         </div>
       </div>
