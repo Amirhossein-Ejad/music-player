@@ -3,8 +3,9 @@ import SideBar from "./components/side_bar/SideBar";
 function App() {
   return (
     <div className="bg-primary">
-      <div className="container flex justify-between  items-center ">
+      <div className="container flex ">
         <SideBar />
+        {/* content */}
         <div className="flex-[4_4_0] w-full h-screen p-5">
           <Header />
         </div>
