@@ -12,9 +12,9 @@ function App() {
       <div className="container flex ">
         <SideBar />
         {/* content */}
-        <div className="flex-[4_4_0] w-full h-screen p-5">
+        <div className="flex-[4_4_0] w-full h-[1500px] p-5 overflow-hidden">
           <Header />
-          <div className=" w-full h-[200px] mt-4 overflow-hidden">
+          <div className="w-full mt-4">
             {router}
             </div>
         </div>

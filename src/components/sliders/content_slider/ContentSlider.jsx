@@ -12,7 +12,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 export default function ContentSlider() {
 
     return (
-        <>
+        <div className='h-[200px] overflow-hidden'>
             <Swiper
                 slidesPerView={'auto'}
                 loop={true}
@@ -232,6 +232,6 @@ export default function ContentSlider() {
                     </div>
                 </SwiperSlide>
             </Swiper>
-        </>
+        </div>
     );
 }
