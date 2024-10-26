@@ -44,18 +44,19 @@ export default function Footer() {
                 {/* like & random & volume */}
                 <div className='flex justify-center items-center gap-x-8'>
                     <div className='flex justify-center items-center p-2 rounded-full hover:bg-gray-600 cursor-pointer'>
-                        <img className=' w-6 h-6 ' src={heartPng}></img>
+                        <img className=' w-6 h-6 ' src={heartPng} alt='heartPng'></img>
                     </div>
                     <div className='flex justify-center items-center p-2 rounded-full hover:bg-gray-600 cursor-pointer'>
-                        <img className=' w-6 h-6 ' src={randomPng}></img
+                        <img className=' w-6 h-6 ' src={randomPng} alt='randomPng'></img
                         ></div>
                     <div className='flex justify-center items-center p-2 rounded-full hover:bg-gray-600 cursor-pointer'>
-                        <img className=' w-6 h-6 ' src={repeatPng}></img>
+                        <img className=' w-6 h-6 ' src={repeatPng} alt='repeatPng'></img>
                     </div>
                     <div className='flex justify-center items-center p-2 rounded-full hover:bg-gray-600 cursor-pointer'>
-                        <img className=' w-6 h-6 ' src={volumePng}></img>
+                        <img className=' w-6 h-6 ' src={volumePng} alt='volumePng'></img>
                     </div>
                 </div>
             </div>
         </>
-    )}
+    )
+}
