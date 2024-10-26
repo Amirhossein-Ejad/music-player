@@ -5,8 +5,8 @@ export default function SideBar() {
 
   return (
     <>
-      <div className=" flex flex-[1_1_0] h-screen items-center ">
-        <div className="w-full h-[94%] bg-secondary_dark rounded-3xl">
+      <div className=" flex flex-[1_1_0] h-fit items-start mt-5 ">
+        <div className="w-full bg-secondary_dark h-[600px] rounded-3xl">
           {/* logo & image sidebar */}
           <Link to={'/'} className=" justify-center flex items-center gap-x-2 pt-3">
             <img className="cursor-pointer w-5 h-5 inline-block" src={logoimg} alt="logoimg" />

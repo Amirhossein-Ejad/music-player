@@ -6,10 +6,6 @@ import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 
 export default function Home() {
 
-    useEffect(() => {
-        console.log('component did mount (HOME)');
-
-    })
     return (
 
         <>
@@ -54,7 +50,7 @@ export default function Home() {
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=10" alt="" />
+                                <img className=' rounded-xl text-white bg-white' src="https://picsum.photos/100/120?random=10" alt="" />
                             </div>
                             <div className='text-white'>
                                 <p className='font-bold'>Golden Days</p>
