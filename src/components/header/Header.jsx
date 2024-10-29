@@ -1,12 +1,55 @@
 import SearchBox from "../search_box/SearchBox";
-import profileIMG from './../header/profile.jpg'
+import profileIMG from './../header/profile.jpg';
+import accountSvg from './account.svg';
+import menuSvg from './menu.svg';
+import { useRef } from "react";
+
+
 export default function Header() {
+
+  const accountMenu = useRef()
+  const wrapperBlur = useRef()
+  const wrapperBlurPagesMenu = useRef()
+  const pagesMenu = useRef()
+
+
+  const showAccoungSetting = () => {
+    accountMenu.current.classList.remove('-translate-x-[100%]')
+    wrapperBlur.current.classList.remove('-translate-x-[100%]')
+    wrapperBlur.current.classList.add('translate-x-[0]')
+    accountMenu.current.classList.add('translate-x-[0]')
+  }
+
+  const closeAccoungSetting = () => {
+    accountMenu.current.classList.add('-translate-x-[100%]')
+    wrapperBlur.current.classList.add('-translate-x-[100%]')
+    wrapperBlur.current.classList.remove('translate-x-[0]')
+    accountMenu.current.classList.remove('translate-x-[0]')
+  }
+
+  const showPagesMenu = () => {
+
+    wrapperBlurPagesMenu.current.classList.add('translate-x-[0]')
+    pagesMenu.current.classList.add('translate-x-[0]')
+    wrapperBlurPagesMenu.current.classList.remove('translate-x-[100%]')
+    pagesMenu.current.classList.remove('translate-x-[100%]')
+  }
+
+  const closePagesMenu = () => {
+    wrapperBlurPagesMenu.current.classList.remove('translate-x-[0]')
+    pagesMenu.current.classList.remove('translate-x-[0]')
+    wrapperBlurPagesMenu.current.classList.add('translate-x-[100%]')
+    pagesMenu.current.classList.add('translate-x-[100%]')
+  }
+
+
+
   return (
-    <div className="flex justify-between items-center w-full h-10 ">
+    <div className="flex justify-start gap-x-4 items-center border-b border-b-emerald-700 w-full h-10 lg:justify-between lg:border-none">
       <SearchBox />
 
       {/* profile & setting */}
-      <div className="flex justify-evenly items-center gap-x-3">
+      <div className="hidden lg:flex justify-evenly items-center gap-x-3">
         {/* profile */}
         <div className="flex justify-between items-center gap-x-2 cursor-pointer" >
           <img className="overflow-hidden w-10 h-10 object-cover object-center rounded-full" src={profileIMG} alt="profileIMG" />
@@ -30,6 +73,26 @@ export default function Header() {
           </div>
         </div>
       </div>
+      {/* Mobile */}
+      {/* Account Icon Mobile */}
+      <div onClick={showAccoungSetting} className="flex justify-center items-center rounded-full w-8 h-8 object-cover object-center overflow-hidden cursor-pointer lg:hidden">
+        <img className="cursor-pointer w-5 h-5" src={accountSvg} alt="accountSvg" />
+      </div>
+      {/* Menu icon Mobile */}
+      <div onClick={showPagesMenu} className="flex justify-center items-center rounded-full w-8 h-8 object-cover object-center overflow-hidden cursor-pointer lg:hidden">
+        <img className="cursor-pointer w-5 h-5" src={menuSvg} alt="accountSvg" />
+      </div>
+      {/* Menu Account  */}
+      {/* wrapper blur */}
+      <div ref={wrapperBlur} onClick={closeAccoungSetting} className="w-full h-screen bg-black opacity-70 absolute top-0 left-0 bottom-0 transition-transform -translate-x-[100%] z-10 lg:hidden"></div>
+      <div ref={accountMenu} onClick={showAccoungSetting} className="w-[40%] h-screen bg-secondary_ligth absolute top-0 left-0 bottom-0 -translate-x-[100%] z-20 lg:hidden"></div>
+
+
+      <div onClick={closePagesMenu} ref={wrapperBlurPagesMenu} className="w-full h-screen bg-black opacity-70 absolute top-0 right-0 bottom-0 transition-transform translate-x-[100%] z-10 lg:hidden"></div>
+      <div ref={pagesMenu} className="w-[40%] h-screen bg-secondary_ligth absolute top-0 right-0 bottom-0 translate-x-[100%] z-20 lg:hidden"></div>
+
     </div>
+
+
   );
 }

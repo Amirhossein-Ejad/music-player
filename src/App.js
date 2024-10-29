@@ -8,16 +8,16 @@ function App() {
   const router = useRoutes(routes);
 
   return (
-    <div className="bg-primary overflow-hidden h-screen">
+    <div className="bg-primary min-h-screen">
       <div className="container flex ">
         <SideBar />
         {/* content */}
-        <div className="flex-[4_4_0] w-full p-5 overflow-hidden">
+        <div className="flex-[4_4_0] w-full p-5 overflow-x-hidden relative">
           <Header />
           <div className="w-full mt-4">{router}</div>
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
   );
 }

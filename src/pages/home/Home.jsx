@@ -20,7 +20,7 @@ export default function Home() {
 
             {/* List Categories */}
 
-            <ul class="flex gap-x-5 mt-4">
+            <ul class="flex gap-x-5 mt-4 overflow-x-scroll lg:overflow-x-hidden">
                 <li class="text-white px-5 py-1 border border-white rounded-2xl hover:bg-teal-600 hover:border-none transition-all cursor-pointer">All</li>
                 <li class="text-white px-5 py-1 border border-white rounded-2xl hover:bg-teal-600 hover:border-none transition-all cursor-pointer">Relax</li>
                 <li class="text-white px-5 py-1 border border-white rounded-2xl hover:bg-teal-600 hover:border-none transition-all cursor-pointer">Sad</li>
