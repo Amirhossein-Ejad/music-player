@@ -15,12 +15,12 @@ export default function Home() {
 
             {/* select Categories */}
 
-            <p className="text-white font-bold text-xl mt-10">Select Categories</p>
+            <p className="text-white font-bold text-xl my-6">Select Categories</p>
 
 
             {/* List Categories */}
 
-            <ul class="flex gap-x-5 mt-4 overflow-x-scroll lg:overflow-x-hidden">
+            <ul class="flex gap-x-5 my-4 overflow-x-scroll lg:overflow-x-hidden">
                 <li class="text-white px-5 py-1 border border-white rounded-2xl hover:bg-teal-600 hover:border-none transition-all cursor-pointer">All</li>
                 <li class="text-white px-5 py-1 border border-white rounded-2xl hover:bg-teal-600 hover:border-none transition-all cursor-pointer">Relax</li>
                 <li class="text-white px-5 py-1 border border-white rounded-2xl hover:bg-teal-600 hover:border-none transition-all cursor-pointer">Sad</li>
@@ -37,6 +37,23 @@ export default function Home() {
             {/* Slider Categories */}
             <>
                 <Swiper
+                    breakpoints={{
+                        // when window width is >= 320px
+                        320: {
+                            spaceBetween: 10,
+                            slidesPerView: 3,
+                        },
+                        // when window width is >= 640px
+                        640: {
+                            spaceBetween: 15,
+                            slidesPerView: 4,
+                        },
+                        // when window width is >= 768px
+                        1080: {
+                            spaceBetween: 30,
+                            slidesPerView: 5,
+                        },
+                    }}
                     slidesPerView={6}
                     spaceBetween={5}
                     freeMode={true}
@@ -47,91 +64,92 @@ export default function Home() {
                     modules={[FreeMode, Pagination, Autoplay]}
                     className="text-white mt-3 text-sm"
                 >
+
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl text-white bg-white' src="https://picsum.photos/100/120?random=10" alt="" />
+                                <img className=' rounded-xl text-white bg-white' src="https://picsum.photos/100/120?random=10 " alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=11" alt="" />
+                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=11" alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=12" alt="" />
+                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=12" alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=13" alt="" />
+                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=13" alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=14" alt="" />
+                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=14" alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=15" alt="" />
+                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=15" alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=16" alt="" />
+                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=16" alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className='p-3 overflow-hidden rounded-xl border border-emerald-400'>
                             <div className=' overflow-hidden '>
-                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=17" alt="" />
+                                <img className=' rounded-xl' src="https://picsum.photos/100/120?random=17" alt="picsum.photos" />
                             </div>
                             <div className='text-white'>
-                                <p className='font-bold'>Golden Days</p>
-                                <p>Felix Carter</p>
+                                <p className="font-bold sm:text-sm lg:text-base line-clamp-1" >Golden Days</p>
+                                <p className="sm:text-sm lg:text-base line-clamp-1">Felix Carter</p>
                             </div>
                         </div>
                     </SwiperSlide>

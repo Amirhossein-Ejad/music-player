@@ -8,8 +8,8 @@ function App() {
   const router = useRoutes(routes);
 
   return (
-    <div className="bg-primary min-h-screen">
-      <div className="container flex ">
+    <div className="bg-primary ">
+      <div className="container flex min-h-screen">
         <SideBar />
         {/* content */}
         <div className="flex-[4_4_0] w-full p-5 overflow-x-hidden relative">
