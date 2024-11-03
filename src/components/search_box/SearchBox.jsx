@@ -16,6 +16,7 @@ export default function SearchBox() {
         serchBoxMobile.current.classList.toggle('-translate-y-24');
         serchBoxMobile.current.classList.toggle('translate-y-0');
         console.log('show showserchBoxMobile');
+        inputSerchBoxMobile.current.focus()
 
     }
     const closeSerchBoxMobile = () => {
@@ -39,10 +40,6 @@ export default function SearchBox() {
 
     }
 
-    const focucHandler = () => {
-        inputSerchBoxMobile.current.focus()
-
-    }
     return (
         <>
             <div className="hidden md:flex justify-between items-center p-5 rounded-3xl h-10 bg-gray-700 opacity-80">
@@ -59,7 +56,7 @@ export default function SearchBox() {
             </div>
             {/* wpapper */}
             <div ref={wrapperSerchBoxMobile} onClick={closeSerchBoxMobile} className="w-full h-screen absolute inset-0 bg-black opacity-85 transition-transform translate-y-[-100%] z-10"></div>
-            <div onClick={focucHandler} ref={serchBoxMobile} className="flex justify-center items-center w-90% h-20 mx-auto absolute inset-0 top-0 text-white bg-gray-700 -translate-y-24 transition-transform z-20" >
+            <div ref={serchBoxMobile} className="flex justify-center items-center w-90% h-20 mx-auto absolute inset-0 top-0 text-white bg-gray-700 -translate-y-24 transition-transform z-20" >
                 <input ref={inputSerchBoxMobile} className="outline-none border-none bg-transparent" placeholder="search for song"></input>
                 <svg onClick={searchHandling} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style={{ color: "#afb0b2" }} class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
