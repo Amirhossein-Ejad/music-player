@@ -1,6 +1,5 @@
 import './home.css'
 import ContentSlider from "../../components/sliders/content_slider/ContentSlider";
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 
@@ -11,12 +10,9 @@ export default function Home() {
         <>
             <ContentSlider />
 
-
-
             {/* select Categories */}
 
             <p className="text-white font-bold text-xl my-6">Select Categories</p>
-
 
             {/* List Categories */}
 
@@ -62,7 +58,7 @@ export default function Home() {
                         clickable: true,
                     }}
                     modules={[FreeMode, Pagination, Autoplay]}
-                    className="text-white mt-3 text-sm"
+                    className="text-white mt-3 mb-20 text-sm"
                 >
 
                     <SwiperSlide>

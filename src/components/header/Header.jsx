@@ -3,7 +3,8 @@ import profileIMG from './../header/profile.jpg';
 import accountSvg from './account.svg';
 import menuSvg from './menu.svg';
 import { useRef } from "react";
-
+import MenuNavLinks from "../menu_NavLinks/MenuNavLinks";
+import closeSvg from './close.svg'
 
 export default function Header() {
 
@@ -85,11 +86,18 @@ export default function Header() {
       {/* Menu Account  */}
       {/* wrapper blur */}
       <div ref={wrapperBlur} onClick={closeAccoungSetting} className="w-full h-screen bg-black opacity-70 absolute top-0 left-0 bottom-0 transition-transform -translate-x-[100%] z-10 lg:hidden"></div>
-      <div ref={accountMenu} onClick={showAccoungSetting} className="w-[40%] h-screen bg-secondary_ligth absolute top-0 left-0 bottom-0 -translate-x-[100%] z-20 lg:hidden"></div>
+      <div ref={accountMenu} onClick={showAccoungSetting} className="w-[50%] h-screen bg-secondary_ligth absolute top-0 left-0 bottom-0 -translate-x-[100%] z-20 lg:hidden"></div>
 
 
       <div onClick={closePagesMenu} ref={wrapperBlurPagesMenu} className="w-full h-screen bg-black opacity-70 absolute top-0 right-0 bottom-0 transition-transform translate-x-[100%] z-10 lg:hidden"></div>
-      <div ref={pagesMenu} className="w-[40%] h-screen bg-secondary_ligth absolute top-0 right-0 bottom-0 translate-x-[100%] z-20 lg:hidden"></div>
+      <div ref={pagesMenu} className="w-[50%] h-screen bg-secondary_ligth absolute top-0 right-0 bottom-0 translate-x-[100%] z-20 lg:hidden">
+        <div onClick={closePagesMenu} className="mb-16">
+          <img className="w-7 h-7 felx justify-center items-center absolute top-3 right-3 p-1 rounded-md" src={closeSvg} alt="closeSvg" />
+        </div>
+        <div className="flex flex-col mt-12 gap-y-6 items-center text-white ">
+          <MenuNavLinks onclosePagesMenu={closePagesMenu} />
+        </div>
+      </div>
 
     </div>
 
