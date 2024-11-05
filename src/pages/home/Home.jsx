@@ -12,7 +12,7 @@ export default function Home() {
 
             {/* select Categories */}
 
-            <p className="text-white font-bold text-xl my-6">Select Categories</p>
+            <p className="text-white font-bold text-xl mb-4 mt-10">Select Categories</p>
 
             {/* List Categories */}
 

@@ -37,6 +37,8 @@ export default function Header() {
   }
 
   const closePagesMenu = () => {
+    console.log('closePagesMenu');
+
     wrapperBlurPagesMenu.current.classList.remove('translate-x-[0]')
     pagesMenu.current.classList.remove('translate-x-[0]')
     wrapperBlurPagesMenu.current.classList.add('translate-x-[100%]')
@@ -94,8 +96,10 @@ export default function Header() {
         <div onClick={closePagesMenu} className="mb-16">
           <img className="w-7 h-7 felx justify-center items-center absolute top-3 right-3 p-1 rounded-md" src={closeSvg} alt="closeSvg" />
         </div>
-        <div className="flex flex-col mt-12 gap-y-6 items-center text-white ">
-          <MenuNavLinks onclosePagesMenu={closePagesMenu} />
+        <div>
+          <div onClick={closePagesMenu} className="flex flex-col mt-12 gap-y-5 items-center text-white">
+            <MenuNavLinks />
+          </div>
         </div>
       </div>
 
