@@ -1,19 +1,14 @@
-import { useEffect } from "react"
 
-
-
+import Card from "../../components/card/Card"
 export default function Categories() {
 
-    useEffect(() => {
-        console.log('component did mount (CATEGORIES)');
 
-    })
 
     return (
         <>
-            <p className="w-full h-10 bg-red-500 text-white text-3xl text-center">
-                categories
-            </p>
+            <div className="container min-h-max mb-20 flex justify-center lg:justify-between gap-7 items-start flex-wrap">
+                <Card />
+            </div>
 
 
         </>

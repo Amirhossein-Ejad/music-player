@@ -1,13 +1,5 @@
-import { useEffect } from "react"
-
-
-
-export default function Artists() {
-
-    useEffect(() => {
-        console.log('component did mount (ARTISTS)');
-
-    })
+import { categorisData } from "../../datas"
+export default function Card() {
 
     return (
         <>
